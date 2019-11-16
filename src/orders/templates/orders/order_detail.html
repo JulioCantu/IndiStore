@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+
+
+ <div class='row'>
+    <div class='col-12 col-md-6 mx-auto'>
+         <h1>Orden {{ object.order_id }}</h1>
+          <hr/>
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-12 col-md-6 mx-auto'>
+<p>Artículos: {% for product in object.cart.products.all %}{{ product }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+<p>Dirección de Envío: {{ object.shipping_address_final }}</p>
+<p>Dirección de facturación: {{ object.billing_address_final }}</p>
+<p>Subtotal: {{ object.cart.total }}</p>
+<p>Total de envío: {{ object.shipping_total }}</p>
+<p>Total del pedido: {{ object.total }}</p>
+<p>Estado del pedido: {{ object.get_status }}</p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='row'>
+<div class='col-12'>
+<h1>Cuenta</h1>
+<hr/>
+</div>
+<div class='col-12 col-md-3 my-3'>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Soporte</h4>
+            <div class='list-group'>
+                <a class='list-group-item' href='{% url "about" %}'>Acerca de</a>
+                <a class='list-group-item' href='{% url "contact" %}'>Contacto</a>
+            </div>
+      </div>
+    </div>
+</div>
+
+
+
+<div class='col-12 col-md-3 my-3' id='billing'>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Facturación</h4>
+            <div class='list-group'>
+                <a class='list-group-item' href='{% url "orders:list" %}'>Ordenes</a>
+                <a class='list-group-item' href='{% url "billing-payment-method" %}'>Metodos de pago</a>
+                <a class='list-group-item' href='{% url "addresses" %}'>Direcciones</a>
+                
+                
+            </div>
+      </div>
+    </div>
+</div>
+
+
+<div class='col-12 col-md-3 my-3'>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Detalles de cuenta</h4> 
+            <div class='list-group'>
+                <a class='list-group-item' href='{% url "account:user-update" %}'>Actualizar detalles</a>
+                <a class='list-group-item' href='{% url "password_change" %}'>Cambiar contraseña</a>
+                <a class='list-group-item' href='{% url "library" %}'>Librería</a>
+                
+            </div>
+
+      </div>
+    </div>
+</div>
+
+
+<div class='col-12 col-md-3 my-3'>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Preferencias</h4> 
+            <div class='list-group'>
+                <a class='list-group-item' href='{% url "marketing-pref" %}'>Marketing por correo</a>
+                
+            </div>
+
+      </div>
+    </div>
+</div>
+
+
+<!-- <div class='col-12 col-md-3 my-3'>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Historial</h4> 
+              <div class='list-group'>
+                <a class='list-group-item' href='{% url "account:user-product-history" %}'>Productos</a>
+            </div>
+      </div>
+    </div>
+</div> -->
+
+
+</div>
+
+
+{% endblock %}

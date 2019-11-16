@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class='row my-5'>
+    <div class='col-12'>
+        <h1>Datos de ventas</h1>
+    </div>
+</div>
+
+<hr/>
+
+<div class='row my-5'>
+    <div class='col-4'>
+        <h3>Las ventas de hoy</h3>
+        <hr/>
+        <p>Total reciente: ${{ today.recent_data.total__sum }}</p>
+        <ul>
+        {% for order in today.recent|slice:":5" %}
+            <li class='my-3'>Orden #{{ order.order_id }}<br/>
+            ${{ order.total }}<br/>
+            {{ order.updated|timesince }} hace</li>
+        {% endfor %}
+    </ul>
+   
+    <h3>Las ventas de esta semana</h3>
+    <hr/>
+        <p>Total reciente: ${{ this_week.recent_data.total__sum }}</p>
+        <ul>
+        {% for order in this_week.recent|slice:":5" %}
+            <li class='my-3'>Orden #{{ order.order_id }}<br/>
+            ${{ order.total }}<br/>
+            {{ order.updated|timesince }} hace</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <div class='col'>
+       <canvas class='cfe-render-chart' id="thisWeekSales" data-type='week' width="400" height="400"></canvas>
+    </div>
+</div>
+
+
+
+<hr/>
+
+<div class='row my-5'>
+    <div class='col-12'>
+        <h1>4 semanas anteriores</h1>
+    </div>
+    <div class='col'>
+        <p>Total de pedidos: ${{ last_four_weeks.recent_data.total__sum }}</p>
+        <p>Total enviado: {% if last_four_weeks.shipped_data.total__sum %}${{ last_four_weeks.shipped_data.total__sum }} {% endif %}</p>
+        <p>Totales pagados: ${{ last_four_weeks.paid_data.total__sum }}</p>
+
+    </div>
+     <div class='col'>
+       <canvas class='cfe-render-chart' id="fourWeekSales" data-type='4weeks' width="400" height="400"></canvas>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}
