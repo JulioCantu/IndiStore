@@ -15,11 +15,12 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'hj0@rnt9%)45d4y(t^ti2@@%7z6c-lstv=g3rg08zcxdx-+nml'
+SECRET_KEY = '@!-)jwmuzh8btr380g61=g+#&zzei&dz2(&=xbvxztady)_p(r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -27,24 +28,26 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'julio23mc@gmail.com' 
+EMAIL_HOST_USER = 'julio23@gmail.com' 
 EMAIL_HOST_PASSWORD = 'yourpassword'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Python ecommerce <julio23mc@gmail.com>'
+DEFAULT_FROM_EMAIL = 'IndiStore <julio23@gmail.com>'
 BASE_URL = '127.0.0.1:8000'
 
+
 MANAGERS = (
-    ('Justin Mitchel', "julio23mc@gmail.com"),
+    ('Julio Moreno', "julio23@gmail.com"),
 )
 
 ADMINS = MANAGERS
+
+
 
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django_extensions',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -81,8 +84,8 @@ MAILCHIMP_DATA_CENTER = "us17"
 MAILCHIMP_EMAIL_LIST_ID = "e2ef12efee"
 
 
-STRIPE_SECRET_KEY = "sk_test_0RqbPOPaL5fC9wc2fFvILlEE00JtIOChb9"
-STRIPE_PUB_KEY = 'pk_test_sDTw4zbkDrl6zgm7Rd3ytW9R00aKQzPhUC'
+STRIPE_SECRET_KEY = "sk_test_cu1lQmcg1OLffhLvYrSCp5XE"
+STRIPE_PUB_KEY = 'pk_test_PrV61avxnHaWIYZEeiYTTVMZ'
 
 
 MIDDLEWARE = [
@@ -193,6 +196,5 @@ CSRF_COOKIE_SECURE              = False
 SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
-
 
 

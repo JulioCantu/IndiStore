@@ -25,15 +25,15 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'hungrypy@gmail.com' 
+EMAIL_HOST_USER = 'julio23@gmail.com' 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Python ecommerce <hungrypy@gmail.com>'
-BASE_URL = 'https://www.pythonecommerce.com/'
+DEFAULT_FROM_EMAIL = 'IndiStore <julio23@gmail.com>'
+BASE_URL = ''
 
 MANAGERS = (
-    ('Justin Mitchel', "hungrypy@gmail.com"),
+    ('Julio Moreno', "julio23@gmail.com"),
 )
 
 ADMINS = MANAGERS
@@ -50,7 +50,6 @@ ALLOWED_HOSTS = ['.pythonecommerce.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django_extensions',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -87,8 +86,8 @@ MAILCHIMP_DATA_CENTER = "us17"
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get("MAILCHIMP_EMAIL_LIST_ID")
 
 
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_0RqbPOPaL5fC9wc2fFvILlEE00JtIOChb9")
-STRIPE_PUB_KEY = os.environ.get("STRIPE_PUB_KEY", 'pk_test_sDTw4zbkDrl6zgm7Rd3ytW9R00aKQzPhUC')
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_cu1lQmcg1OLffhLvYrSCp5XE")
+STRIPE_PUB_KEY = os.environ.get("STRIPE_PUB_KEY", 'pk_test_PrV61avxnHaWIYZEeiYTTVMZ')
 
 
 MIDDLEWARE = [
@@ -206,7 +205,6 @@ CSRF_COOKIE_SECURE              = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = True
 SECURE_HSTS_SECONDS             = 1000000
 SECURE_FRAME_DENY               = True
-
 
 
 
